@@ -6,24 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <script src="https://www.unpkg.com/@owl-js/web-sdk@latest/lib/index.golbal.js"></script> -->
+    <script src="https://www.unpkg.com/@owl-js/web-sdk@1.0.1/lib/index.golbal.js"></script>
     <!-- 页面 <head>标签顶部添加以下代码  -->
-<script>
-(function(n,e,r,t,a,o,s,i,c,l,f,m,p,u){o="precollect";s="getAttribute";i="addEventListener";c="PerformanceObserver";l=function(e){f=[].slice.call(arguments);f.push(Date.now(),location.href);(e==o?l.p.a:l.q).push(f)};l.q=[];l.p={a:[]};n[a]=l;m=document.createElement("script");m.src=r+"?aid="+t+"&globalName="+a;m.crossorigin="anonymous";e.getElementsByTagName("head")[0].appendChild(m);if(i        in        n){l.pcErr=function(e){e=e||n.event;p=e.target||e.srcElement;if(p        instanceof        Element||p        instanceof        HTMLElement){n[a](o,"st",{tagName:p.tagName,url:p[s]("href")||p[s]("src")})}else{n[a](o,"err",e.error||e.message)}};l.pcRej=function(e){e=e||n.event;n[a](o,"reject",e.reason||e.detail&&e.detail.reason)};n[i]("error",l.pcErr,true);n[i]("unhandledrejection",l.pcRej,true)}if("PerformanceLongTaskTiming"in        n){u=l.pp={entries:[]};u.observer=new        PerformanceObserver(function(e){u.entries=u.entries.concat(e.getEntries())});u.observer.observe({entryTypes:["longtask","largest-contentful-paint","layout-shift"]})}})(window,document,"./browser.js",0,"apmPlus");
-</script>
-<script>
-    console.log(window.apmPlus);
-window.apmPlus("init",{
-  aid:0,
-  token: 'xxx-xxx'
-});
-window.apmPlus("start");
-</script>
+    <script>
+        !function(e,t,r,n,a){var o=function(){for(var e=[],t=0;t<arguments.length;t++)e[t]=arguments[t];e.push(Date.now(),location.href),("precollect"==e[0]?o.p.a:o.q).push(e)};o.q=[],o.p={a:[]},e[a]=o;var s=document.createElement("script");s.src=r+"?aid="+n+"&globalName="+a,s.crossOrigin="anonymous",t.getElementsByTagName("head")[0].appendChild(s),"addEventListener"in e&&(o.pcErr=function(t){var r=t||e.event,n=r.target||r.srcElement;n instanceof Element||n instanceof HTMLElement?e[a]("precollect","st",{tagName:n.tagName,url:n.getAttribute("href")||n.getAttribute("src")}):e[a]("precollect","err",r.error||r.message)},o.pcRej=function(t){var r=t||e.event;e[a]("precollect","err",r.reason||r.detail&&r.detail.reason)},e.addEventListener("error",o.pcErr,!0),e.addEventListener("unhandledrejection",o.pcRej,!0)),"PerformanceLongTaskTiming"in e&&(o.pp={entries:[]},o.pp.observer=new PerformanceObserver((function(e){o.pp.entries=o.pp.entries.concat(e.getEntries())})),o.pp.observer.observe({entryTypes:["longtask","largest-contentful-paint","layout-shift"]}))}(window,document,"https://www.unpkg.com/@owl-js/web-sdk@latest/cdn/browser.js","aid","browserClient");
+    </script>
     <style>
-        .sdk-config{
+        .sdk-config {
             padding: 8px;
             border: 1px dashed rgba(0, 0, 0, 0.15);
         }
+
         .btn {
             border: none;
             color: #fff;
