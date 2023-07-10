@@ -100,8 +100,6 @@
         <button class="btn">自定义SPA性能</button>
         <button class="btn" onclick="sendEvent()">自定义上报事件</button>
         <button class="btn" onclick="sendLog()">自定义上报日志</button>
-        <button class="btn">自定义上报事件with metrics</button>
-        <button class="btn">自定义上报日志with extra</button>
         <button class="btn">设置context</button>
     </div>
     <script>
@@ -215,7 +213,18 @@
         }
 
         function sendEvent() {
-
+            window.browserClient('sendEvent', {
+                name: 'login_event',
+                metrics: {
+                    login_count: 1,
+                    login_api_duration: 1000,
+                    server_timing: 3456,
+                    login_level: 23,
+                },
+                categories: {
+                    where: 'login_page',
+                },
+            })
         }
 
         function sendLog() {
