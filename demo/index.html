@@ -95,7 +95,7 @@
         <button class="btn" onclick="triggerAjaxFail()">触发Ajax请求失败</button>
         <button class="btn" onclick="triggerAjaxSuccess()">触发Ajax请求成功</button>
         <button class="btn" onclick="triggerFetchFail()">触发Fetch请求失败</button>
-        <button class="btn" onclick="triggerAjaxSuccess()">触发Fetch请求成功</button>
+        <button class="btn" onclick="triggerFetchSuccess()">触发Fetch请求成功</button>
         <button class="btn" onclick="triggerBlankScreen()">触发白屏</button>
         <button class="btn">自定义SPA性能</button>
         <button class="btn" onclick="sendEvent()">自定义上报事件</button>
@@ -204,8 +204,7 @@
 
         function triggerFetchSuccess() {
             fetch('https://www.unpkg.com/vue@3.3.4/dist/vue.global.js')
-                .then(response => response.json())
-                .then(data => console.log(data))
+                .then(response => { console.log(response) })
         }
 
         function triggerBlankScreen() {
