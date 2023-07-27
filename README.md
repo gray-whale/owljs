@@ -78,6 +78,7 @@ window.browserClient("init",{
   token: 'xxx-xxx'
 });
 window.browserClient("start");
+```
 
 ## 小程序监控 SDK
 ### 已支持小程序平台
