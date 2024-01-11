@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- 页面 <head>标签顶部添加以下代码  -->
     <script>
-        !function (e, t, r, n, a) { var o = function () { for (var e = [], t = 0; t < arguments.length; t++)e[t] = arguments[t]; e.push(Date.now(), location.href), ("precollect" == e[0] ? o.p.a : o.q).push(e) }; o.q = [], o.p = { a: [] }, e[a] = o; var s = document.createElement("script"); s.src = r + "?aid=" + n + "&globalName=" + a, s.crossOrigin = "anonymous", t.getElementsByTagName("head")[0].appendChild(s), "addEventListener" in e && (o.pcErr = function (t) { var r = t || e.event, n = r.target || r.srcElement; n instanceof Element || n instanceof HTMLElement ? e[a]("precollect", "st", { tagName: n.tagName, url: n.getAttribute("href") || n.getAttribute("src") }) : e[a]("precollect", "err", r.error || r.message) }, o.pcRej = function (t) { var r = t || e.event; e[a]("precollect", "err", r.reason || r.detail && r.detail.reason) }, e.addEventListener("error", o.pcErr, !0), e.addEventListener("unhandledrejection", o.pcRej, !0)), "PerformanceLongTaskTiming" in e && (o.pp = { entries: [] }, o.pp.observer = new PerformanceObserver((function (e) { o.pp.entries = o.pp.entries.concat(e.getEntries()) })), o.pp.observer.observe({ entryTypes: ["longtask", "largest-contentful-paint", "layout-shift"] })) }(window, document, "https://www.unpkg.com/@owl-js/web@latest/cdn/browser.js", "aid", "browserClient");
+        !function (e, t, r, n, a) { var o = function () { for (var e = [], t = 0; t < arguments.length; t++)e[t] = arguments[t]; e.push(Date.now(), location.href), ("precollect" == e[0] ? o.p.a : o.q).push(e) }; o.q = [], o.p = { a: [] }, e[a] = o; var s = document.createElement("script"); s.src = r + "?aid=" + n + "&globalName=" + a, s.crossOrigin = "anonymous", t.getElementsByTagName("head")[0].appendChild(s), "addEventListener" in e && (o.pcErr = function (t) { var r = t || e.event, n = r.target || r.srcElement; n instanceof Element || n instanceof HTMLElement ? e[a]("precollect", "st", { tagName: n.tagName, url: n.getAttribute("href") || n.getAttribute("src") }) : e[a]("precollect", "err", r.error || r.message) }, o.pcRej = function (t) { var r = t || e.event; e[a]("precollect", "err", r.reason || r.detail && r.detail.reason) }, e.addEventListener("error", o.pcErr, !0), e.addEventListener("unhandledrejection", o.pcRej, !0)), "PerformanceLongTaskTiming" in e && (o.pp = { entries: [] }, o.pp.observer = new PerformanceObserver((function (e) { o.pp.entries = o.pp.entries.concat(e.getEntries()) })), o.pp.observer.observe({ entryTypes: ["longtask", "largest-contentful-paint", "layout-shift"] })) }(window, document, "./browser.js", "aid", "browserClient");
     </script>
     <style>
         .sdk-config {
@@ -137,7 +137,9 @@
             window.browserClient("init", {
                 aid: aidInput.value,
                 token: 'xxx-xxx',
-                domain: 'http://localhost:8090'
+                domain: 'http://localhost:8090',
+                release: '1.0.1',
+                env: 'dev'
             });
             window.browserClient("start");
         }
