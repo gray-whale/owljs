@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.SVU1Hak4.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"web/index.md","filePath":"web/index.md","lastUpdated":1687676455000}'),n={name:"web/index.md"};function r(o,s,d,c,i,p){return a(),t("div")}const f=e(n,[["render",r]]);export{m as __pageData,f as default};
